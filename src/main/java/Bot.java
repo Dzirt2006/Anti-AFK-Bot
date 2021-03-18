@@ -27,7 +27,7 @@ public class Bot implements Centrable {
 //		mouseThread.start();
 //		windowThread.start();
 		Window frame = new Window();
-		frame.mountFrame();
+		frame.startGUI();
 	}
 
 }
