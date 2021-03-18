@@ -1,3 +1,4 @@
+package gui;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,11 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class BotPanel extends JPanel implements KeyListener, ActionListener {
-
-	public BotPanel() {
-		// TODO Auto-generated constructor stub
-	}
 
 	public void mountStartPanel() {
 		this.setLayout(new FlowLayout());
@@ -41,7 +39,6 @@ public class BotPanel extends JPanel implements KeyListener, ActionListener {
 
 	@Override
 	public void keyPressed(KeyEvent arg) {
-		System.out.println("refresh");
 		if (arg.getKeyCode() == KeyEvent.VK_ESCAPE) {
 			WindowActivity.terminateMouseThread();
 			System.exit(0);

@@ -1,6 +1,6 @@
-import java.awt.AWTException;
+package gui;
 
-import javax.swing.JFrame;
+import java.awt.AWTException;
 
 import frameworks.Controls;
 
@@ -23,16 +23,5 @@ public class WindowActivity {
 	public static void terminateMouseThread() {
 		mouseThread.interrupt();
 	}
-//	private static Thread windowThread = new Thread(new Runnable() {
-//		public void run(JFrame frame) {
-//			
-//		}
-//
-//		@Override
-//		public void run() {
-//			// TODO Auto-generated method stub
-//			
-//		}
-//	});
 
 }

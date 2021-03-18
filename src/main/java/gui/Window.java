@@ -1,12 +1,6 @@
-import java.awt.AWTException;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+package gui;
 
-import javax.swing.*;
+import javax.swing.JFrame;
 
 import frameworks.Centrable;
 
@@ -26,14 +20,10 @@ public class Window implements Centrable {
 		botFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		botFrame.setVisible(true);
 	}
-	
+
 	public void startGUI() {
 		mountFrame();
 		panel.mountStartPanel();
 	}
-
-	/*
-	 * 1. fix exit 2. refactor 3. wrap
-	 */
 
 }
