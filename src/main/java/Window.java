@@ -36,13 +36,17 @@ public class Window implements Centrable, KeyListener, ActionListener {
 
 	public void mountEscListenerPanel() {
 		panel.removeAll();
+		panel.revalidate(); 
 		JLabel label = new JLabel("Press ESC for exit");
 		panel.add(label);
 		panel.addKeyListener(this);
+		panel.repaint();
+		
 	}
 
 	@Override
 	public void keyPressed(KeyEvent arg) {
+		System.out.println("refresh");
 		if (arg.getKeyCode() == KeyEvent.VK_ESCAPE) {
 			WindowActivity.terminateMouseThread();
 			System.exit(0);
@@ -63,15 +67,12 @@ public class Window implements Centrable, KeyListener, ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg) {
-		mountEscListenerPanel(); //fix here(add new thread) 
+		mountEscListenerPanel(); // fix here(add new thread)
 		WindowActivity.runMouseThread();
 	}
-	
-	
+
 	/*
-	 * 1. fix exit
-	 * 2. refactor
-	 * 3. wrap
+	 * 1. fix exit 2. refactor 3. wrap
 	 */
 
 }
